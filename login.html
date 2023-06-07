@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css"/>
+</head>
+<body>
+    <div class="login_main">
+        <div class="form_section">
+            <div class="logo">
+                <img src="/assets/images/footerLogo.png" alt="">
+            </div>
+            <h1  class="login_header">Welcome Back</h1>
+            <p class="login_details">Please Enter your Details</p>
+            <div class="input_form">
+                <label for="#neme">Email</label>
+                <input type="text" placeholder="Enter your email address ">
+            </div>
+            <!-- <div class="input_form">
+                <label for="#neme">Password</label>
+                <input type="text" placeholder="Enter your password">
+            </div> -->
+            <div class='input_form'>
+                <label for='email'>Enter your password</label>
+                <input class='validate' type='password' name='password' id='password' />
+                <span toggle="#password" class="field-icon toggle-password">
+                    <span class="material-icons"><img src="./assets/images/eye-icon-hide.svg" alt=""></span></span>
+            </div>
+            <div class="remember_section">
+                <div class="remember_me">
+                    <input type="checkbox" name="" id="reme">
+                    <label for="reme">Remember me</label>
+                </div>
+                <p>Forgot Password?</p>
+            </div>
+            <div class="btn_section ">
+               <a href="./home.html"> <button class="yellow_btn w-100">Login</button></a>
+              </div>
+              <a href="./signup.html"><p class="signup">New to Quantam Plus? Sign Up</p></a>
+          </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/custom.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- input password eye icon -->
+        <script>
+            var clicked = 0;
+    
+            $(".toggle-password").click(function (e) {
+                e.preventDefault();
+    
+                $(this).toggleClass("toggle-password");
+                if (clicked == 0) {
+                    $(this).html('<span class="material-icons"><img src="./assets/images/eye-icon-hide.svg" alt=""></span >');
+                    clicked = 1;
+                } else {
+                    $(this).html('<span class="material-icons"><img src="./assets/images/eye-icon-show.svg" alt=""></span >');
+                    clicked = 0;
+                }
+    
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+    
+        </script>
+        <!--  -->
+</body>
+</html>
